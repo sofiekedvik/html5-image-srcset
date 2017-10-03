@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image srcset</title>
+    </head>
+    <body>
+
+        <!-- works automaticly on resize -->
+
+        <picture>
+            <source srcset="images/large.jpg" media="(min-width: 1200px)" />
+            <source srcset="images/medium.jpg" media="(min-width: 800px)" />
+            <img src="images/small.jpg" alt="cats"/>
+        </picture>
+
+        <!-- reload page within each breakpoint and see what happens.
+        Might be cashed and retina will allways choose the larger image.
+        You can also write 1x, 0.5x, 2x instead of w. And in sizes attribute
+        add media, simular to the one above -->
+
+        <img src="images/large.jpg" srcset="images/small.jpg 767w, images/medium.jpg 1023w, images/large.jpg 2000w" alt="cats">
+
+    </body>
+</html>
